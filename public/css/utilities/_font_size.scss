@@ -1,0 +1,12 @@
+$fontSizeValues: (8, 10, 12, 14, 16, 20, 24, 26, 32, 36, 40);
+
+@include generateFontSize();
+
+@each $breakpoint in $BREAKPOINTS {
+    $breakpoint: nth($breakpoint, 1);
+    $breakpointSuffix: -#{nth($breakpoint, 1)};
+
+    @include respond-to($breakpoint) {
+        @include generateFontSize($breakpointSuffix);
+    }
+}

@@ -1,0 +1,36 @@
+@mixin generatePadding($breakpoint: null) {
+    .p-auto#{$breakpoint} {
+        padding: auto;
+    }
+
+    .p {
+        @each $paddingValue in $paddingValues {
+            &-#{$paddingValue}#{$breakpoint} {
+                padding: #{$paddingValue}px;
+            }
+        }
+        @each $paddingValue in $paddingValues {
+            &r-#{$paddingValue}#{$breakpoint} {
+                padding-right: #{$paddingValue}px;
+            }
+        }
+
+        @each $paddingValue in $paddingValues {
+            &l-#{$paddingValue}#{$breakpoint} {
+                padding-left: #{$paddingValue}px;
+            }
+        }
+
+        @each $paddingValue in $paddingValues {
+            &t-#{$paddingValue}#{$breakpoint} {
+                padding-top: #{$paddingValue}px;
+            }
+        }
+
+        @each $paddingValue in $paddingValues {
+            &b-#{$paddingValue}#{$breakpoint} {
+                padding-bottom: #{$paddingValue}px;
+            }
+        }
+    }
+}

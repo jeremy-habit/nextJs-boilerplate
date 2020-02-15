@@ -1,0 +1,13 @@
+@mixin generateFontSize($breakpoint: null) {
+    .fs {
+        &-initial#{$breakpoint} {
+            font-size: initial;
+        }
+
+        @each $fontSizeValue in $fontSizeValues {
+            &-#{$fontSizeValue}#{$breakpoint} {
+                font-size: #{$fontSizeValue}px;
+            }
+        }
+    }
+}

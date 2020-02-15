@@ -1,0 +1,7 @@
+@mixin generateTextAlignment($breakpoint: null) {
+    @each $value in $txtAlignValue {
+        .text-#{$value}#{$breakpoint} {
+            text-align: $value;
+        }
+    }
+}

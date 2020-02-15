@@ -1,0 +1,39 @@
+@mixin generateDisplays($breakpoint: null) {
+    .hide#{$breakpoint},
+    .none#{$breakpoint} {
+        display: none;
+    }
+
+    .show#{$breakpoint} {
+        display: initial;
+    }
+
+    .block#{$breakpoint} {
+        display: block;
+    }
+
+    .inline#{$breakpoint} {
+        display: inline;
+    }
+
+    .inline-block#{$breakpoint},
+    .inline#{$breakpoint}.block#{$breakpoint} {
+        display: inline-block;
+    }
+
+    .flex#{$breakpoint} {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .floats-box#{$breakpoint}::after,
+    .floats-box#{$breakpoint}::before {
+        content: '';
+        display: table;
+    }
+
+    .floats-box#{$breakpoint}::after {
+        clear: both;
+    }
+}

@@ -1,0 +1,9 @@
+@mixin generateColors($breakpoint: null) {
+    @each $color in $COLORS {
+        .color-#{nth($color, 1)},
+        .color-#{nth($color, 1)}-hover:hover {
+            color: #{nth($color, 2)};
+            fill: nth($color, 2);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+/* -----------------------  positions  ------------------------ */
+
+@mixin generatePositions($breakpoint : null) {
+
+  .sticky#{$breakpoint} {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+  }
+
+  .fixed#{$breakpoint} {
+    position: fixed;
+  }
+
+  .position-initial#{$breakpoint} {
+    position: initial;
+  }
+
+  .absolute#{$breakpoint} {
+    position: absolute;
+  }
+
+  .relative#{$breakpoint} {
+    position: relative;
+  }
+
+}

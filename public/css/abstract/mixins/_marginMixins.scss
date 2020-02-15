@@ -1,0 +1,36 @@
+@mixin generateMargin($breakpoint: null) {
+    .m-auto#{$breakpoint} {
+        margin: auto;
+    }
+
+    .m {
+        @each $marginValue in $marginValues {
+            &-#{$marginValue}#{$breakpoint} {
+                margin: #{$marginValue}px;
+            }
+        }
+        @each $marginValue in $marginValues {
+            &r-#{$marginValue}#{$breakpoint} {
+                margin-right: #{$marginValue}px;
+            }
+        }
+
+        @each $marginValue in $marginValues {
+            &l-#{$marginValue}#{$breakpoint} {
+                margin-left: #{$marginValue}px;
+            }
+        }
+
+        @each $marginValue in $marginValues {
+            &t-#{$marginValue}#{$breakpoint} {
+                margin-top: #{$marginValue}px;
+            }
+        }
+
+        @each $marginValue in $marginValues {
+            &b-#{$marginValue}#{$breakpoint} {
+                margin-bottom: #{$marginValue}px;
+            }
+        }
+    }
+}

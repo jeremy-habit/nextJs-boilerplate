@@ -1,0 +1,15 @@
+@import 'display';
+@import 'text_align';
+@import 'margin';
+@import 'padding';
+@import 'text_align';
+@import 'font_size';
+@import 'colors';
+@import 'text-styles';
+@import 'flexbox';
+@import 'position';
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
