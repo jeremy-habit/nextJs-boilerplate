@@ -28,11 +28,6 @@ const Login = () => {
     return (
         <div>
             <h1>{t('login:title')}</h1>
-            <form onSubmit={(event) => isValidPassword(event)}>
-                <label>{t('login:secretCodeLabel')}</label>
-                <input onChange={(e) => setPassword(e.target.value)} type="text" name="password"/>
-                <button type="submit">{t('login:submit')}</button>
-            </form>
         </div>
     );
 };
