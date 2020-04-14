@@ -10,7 +10,9 @@ class MyApp extends App {
   
   static async getInitialProps(appCtx) {
     const {ctx} = appCtx;
+    if(ctx & ctx.req)     console.log('ctx.req.language: ', ctx.req.language);
     const currentLanguage = ctx && ctx.req ? ctx.req.language : i18n.language;
+    if(i18n) console.log('i18n.language', i18n.language);
     await i18n.changeLanguage(currentLanguage);
     const appProps = await App.getInitialProps(appCtx);
     return {...appProps}

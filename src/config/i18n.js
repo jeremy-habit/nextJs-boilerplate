@@ -2,12 +2,12 @@ import NextI18Next from 'next-i18next';
 import {isSSR} from '../utils/next.utils';
 
 export const NextI18NextInstance = new NextI18Next({
-    defaultLanguage: 'fr-FR',
+    defaultLanguage: 'en-US',
     ignoreRoutes: ['/_next/', '/static/', '/public/'],
     localePath: isSSR ? 'public/locales' : 'locales',
-    otherLanguages: ['en-US', 'en-GB'],
+    otherLanguages: ['coucou', 'en-GB'],
     localeSubpaths: {
-        "fr-FR": 'fr-FR',
+        "coucou": 'BROUROUROUROUlolilol',
         "en-US": 'en-US',
         "en-GB": 'en-GB'
     },
